@@ -1,6 +1,5 @@
 {% if section.blocks.size > 0 %}
 <announcement-bar
-  class="full-width"
   data-interval="{{ section.settings.rotation_interval }}"
   style="background-color: {{ section.settings.background_color }};"
 >
@@ -35,7 +34,8 @@
 {% stylesheet %}
   announcement-bar {
     display: block;
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
     padding: 0.6rem 1rem;
     text-align: center;
   }
