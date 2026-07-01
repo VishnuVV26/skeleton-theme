@@ -13,14 +13,14 @@
           <a
             class="announcement-bar__text"
             href="{{ block.settings.link }}"
-            style="color: {{ section.settings.text_color }};"
+            style="color: {{ section.settings.text_color }}; font-size: {{ section.settings.font_size }}px;"
           >
             {{- block.settings.text -}}
           </a>
         {% elsif block.settings.text != blank %}
           <span
             class="announcement-bar__text"
-            style="color: {{ section.settings.text_color }};"
+            style="color: {{ section.settings.text_color }}; font-size: {{ section.settings.font_size }}px;"
           >
             {{- block.settings.text -}}
           </span>
@@ -60,7 +60,6 @@
   }
 
   .announcement-bar__text {
-    font-size: 0.75rem;
     letter-spacing: 0.03em;
     text-decoration: none;
     line-height: 1.4;
@@ -77,7 +76,6 @@
     }
 
     .announcement-bar__text {
-      font-size: 0.8125rem;
       letter-spacing: 0.04em;
     }
   }
@@ -89,7 +87,6 @@
     }
 
     .announcement-bar__text {
-      font-size: 0.875rem;
       letter-spacing: 0.05em;
     }
   }
@@ -140,6 +137,16 @@
       "id": "text_color",
       "label": "Text color",
       "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
     },
     {
       "type": "range",

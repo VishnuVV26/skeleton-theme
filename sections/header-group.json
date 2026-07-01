@@ -44,6 +44,7 @@
       "settings": {
         "background_color": "#000000",
         "text_color": "#ffffff",
+        "font_size": 14,
         "rotation_interval": 5
       }
     },
