@@ -12,13 +12,169 @@
     "settings": [
       {
         "type": "header",
-        "content": "t:general.fonts"
+        "content": "t:typography.heading_font_header"
       },
       {
         "type": "font_picker",
-        "id": "type_primary_font",
+        "id": "type_heading_font",
+        "default": "playfair_display_n4",
+        "label": "t:typography.heading_font"
+      },
+      {
+        "type": "header",
+        "content": "t:typography.body_font_header"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_body_font",
         "default": "work_sans_n4",
-        "label": "t:general.primary"
+        "label": "t:typography.body_font"
+      },
+      {
+        "type": "header",
+        "content": "t:typography.headings_header"
+      },
+      {
+        "type": "select",
+        "id": "heading_text_transform",
+        "label": "t:typography.heading_text_transform",
+        "options": [
+          { "value": "none", "label": "t:typography.text_transform.none" },
+          { "value": "uppercase", "label": "t:typography.text_transform.uppercase" },
+          { "value": "capitalize", "label": "t:typography.text_transform.capitalize" }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "select",
+        "id": "heading_weight",
+        "label": "t:typography.heading_weight",
+        "options": [
+          { "value": "300", "label": "t:typography.weight.light" },
+          { "value": "400", "label": "t:typography.weight.regular" },
+          { "value": "500", "label": "t:typography.weight.medium" },
+          { "value": "600", "label": "t:typography.weight.semibold" },
+          { "value": "700", "label": "t:typography.weight.bold" }
+        ],
+        "default": "400"
+      },
+      {
+        "type": "range",
+        "id": "heading_line_height",
+        "min": 100,
+        "max": 200,
+        "step": 5,
+        "unit": "%",
+        "label": "t:typography.line_height",
+        "default": 120
+      },
+      {
+        "type": "range",
+        "id": "heading_letter_spacing",
+        "min": 0,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "t:typography.letter_spacing",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "t:typography.heading_sizes_header"
+      },
+      {
+        "type": "range",
+        "id": "h1_font_size",
+        "min": 32,
+        "max": 96,
+        "step": 2,
+        "unit": "px",
+        "label": "t:typography.h1_size",
+        "default": 56
+      },
+      {
+        "type": "range",
+        "id": "h2_font_size",
+        "min": 28,
+        "max": 80,
+        "step": 2,
+        "unit": "px",
+        "label": "t:typography.h2_size",
+        "default": 44
+      },
+      {
+        "type": "range",
+        "id": "h3_font_size",
+        "min": 22,
+        "max": 64,
+        "step": 2,
+        "unit": "px",
+        "label": "t:typography.h3_size",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "h4_font_size",
+        "min": 18,
+        "max": 48,
+        "step": 2,
+        "unit": "px",
+        "label": "t:typography.h4_size",
+        "default": 28
+      },
+      {
+        "type": "range",
+        "id": "h5_font_size",
+        "min": 14,
+        "max": 36,
+        "step": 2,
+        "unit": "px",
+        "label": "t:typography.h5_size",
+        "default": 22
+      },
+      {
+        "type": "range",
+        "id": "h6_font_size",
+        "min": 12,
+        "max": 28,
+        "step": 2,
+        "unit": "px",
+        "label": "t:typography.h6_size",
+        "default": 18
+      },
+      {
+        "type": "header",
+        "content": "t:typography.body_header"
+      },
+      {
+        "type": "range",
+        "id": "body_font_size",
+        "min": 12,
+        "max": 24,
+        "step": 1,
+        "unit": "px",
+        "label": "t:typography.body_font_size",
+        "default": 15
+      },
+      {
+        "type": "range",
+        "id": "body_line_height",
+        "min": 130,
+        "max": 220,
+        "step": 5,
+        "unit": "%",
+        "label": "t:typography.line_height",
+        "default": 165
+      },
+      {
+        "type": "range",
+        "id": "body_letter_spacing",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "px",
+        "label": "t:typography.letter_spacing",
+        "default": 0
       }
     ]
   },

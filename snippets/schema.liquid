@@ -1,0 +1,16 @@
+{% render 'schema-organization' %}
+{% render 'schema-website' %}
+
+{% case request.page_type %}
+  {% when 'product' %}
+    {% render 'schema-product' %}
+    {% render 'schema-breadcrumb' %}
+  {% when 'collection' %}
+    {% render 'schema-collection' %}
+    {% render 'schema-breadcrumb' %}
+  {% when 'article' %}
+    {% render 'schema-article' %}
+    {% render 'schema-breadcrumb' %}
+  {% when 'page' %}
+    {% render 'schema-breadcrumb' %}
+{% endcase %}

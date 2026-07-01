@@ -50,6 +50,38 @@
     "text_style": "Text style",
     "text": "Text"
   },
+  "typography": {
+    "heading_font_header": "Heading Font",
+    "body_font_header": "Body Font",
+    "heading_font": "Font",
+    "body_font": "Font",
+    "headings_header": "Headings",
+    "heading_sizes_header": "Heading Sizes",
+    "body_header": "Body Text",
+    "heading_text_transform": "Text transform",
+    "heading_weight": "Font weight",
+    "line_height": "Line height",
+    "letter_spacing": "Letter spacing",
+    "h1_size": "H1 font size",
+    "h2_size": "H2 font size",
+    "h3_size": "H3 font size",
+    "h4_size": "H4 font size",
+    "h5_size": "H5 font size",
+    "h6_size": "H6 font size",
+    "body_font_size": "Base size",
+    "text_transform": {
+      "none": "None",
+      "uppercase": "Uppercase",
+      "capitalize": "Capitalize"
+    },
+    "weight": {
+      "light": "Light (300)",
+      "regular": "Regular (400)",
+      "medium": "Medium (500)",
+      "semibold": "Semi Bold (600)",
+      "bold": "Bold (700)"
+    }
+  },
   "options": {
     "alignment": {
       "left": "Left",

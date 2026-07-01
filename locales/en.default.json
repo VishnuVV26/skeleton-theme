@@ -1,4 +1,8 @@
 {
+  "general": {
+    "home": "Home",
+    "catalog": "All Products"
+  },
   "404": {
     "title": "404",
     "not_found": "Page not found.",

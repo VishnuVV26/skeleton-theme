@@ -1,0 +1,26 @@
+{%- liquid
+  assign seo_title = page_title | default: shop.name
+  assign seo_description = page_description | default: shop.description | default: shop.name
+  assign seo_canonical = canonical_url | default: request.origin
+-%}
+
+<title>
+  {{ page_title }}
+  {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+  {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+  {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+</title>
+
+<link rel="canonical" href="{{ seo_canonical }}">
+
+{%- if seo_description -%}
+  <meta name="description" content="{{ seo_description | escape }}">
+{%- endif -%}
+
+{%- if request.page_type == 'password' -%}
+  <meta name="robots" content="noindex,nofollow">
+{%- endif -%}
+
+{% render 'social-meta', title: seo_title, description: seo_description, canonical: seo_canonical %}
+
+{% render 'schema' %}

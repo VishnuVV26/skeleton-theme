@@ -1,14 +1,40 @@
 {% style %}
-  {% # Loads all font variantions with display: swap %}
-  {{ settings.type_primary_font | font_face: font_display: 'swap' }}
-  {{ settings.type_primary_font | font_modify: 'weight', 'bold' | font_face: font_display: 'swap' }}
-  {{ settings.type_primary_font | font_modify: 'weight', 'bold' | font_modify: 'style', 'italic' | font_face: font_display: 'swap' }}
-  {{ settings.type_primary_font | font_modify: 'style', 'italic' | font_face: font_display: 'swap' }}
+  {% # Heading font face variants %}
+  {{ settings.type_heading_font | font_face: font_display: 'swap' }}
+  {{ settings.type_heading_font | font_modify: 'weight', 'bold' | font_face: font_display: 'swap' }}
+  {{ settings.type_heading_font | font_modify: 'style', 'italic' | font_face: font_display: 'swap' }}
+
+  {% # Body font face variants %}
+  {{ settings.type_body_font | font_face: font_display: 'swap' }}
+  {{ settings.type_body_font | font_modify: 'weight', 'bold' | font_face: font_display: 'swap' }}
+  {{ settings.type_body_font | font_modify: 'weight', 'bold' | font_modify: 'style', 'italic' | font_face: font_display: 'swap' }}
+  {{ settings.type_body_font | font_modify: 'style', 'italic' | font_face: font_display: 'swap' }}
 
   :root {
-    --font-primary--family: {{ settings.type_primary_font.family }}, {{ settings.type_primary_font.fallback_families }};
-    --font-primary--style: {{ settings.type_primary_font.style }};
-    --font-primary--weight: {{ settings.type_primary_font.weight }};
+    --font-heading--family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    --font-heading--weight: {{ settings.type_heading_font.weight }};
+    --font-heading--style: {{ settings.type_heading_font.style }};
+
+    --font-body--family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    --font-body--weight: {{ settings.type_body_font.weight }};
+    --font-body--style: {{ settings.type_body_font.style }};
+
+    --heading-text-transform: {{ settings.heading_text_transform }};
+    --heading-font-weight: {{ settings.heading_weight }};
+    --heading-line-height: {{ settings.heading_line_height | divided_by: 100.0 }};
+    --heading-letter-spacing: {{ settings.heading_letter_spacing }}px;
+
+    --h1-font-size: {{ settings.h1_font_size }}px;
+    --h2-font-size: {{ settings.h2_font_size }}px;
+    --h3-font-size: {{ settings.h3_font_size }}px;
+    --h4-font-size: {{ settings.h4_font_size }}px;
+    --h5-font-size: {{ settings.h5_font_size }}px;
+    --h6-font-size: {{ settings.h6_font_size }}px;
+
+    --body-font-size: {{ settings.body_font_size }}px;
+    --body-line-height: {{ settings.body_line_height | divided_by: 100.0 }};
+    --body-letter-spacing: {{ settings.body_letter_spacing }}px;
+
     --page-width: {{ settings.max_page_width }};
     --page-margin: {{ settings.min_page_margin }}px;
     --color-background: {{ settings.background_color }};
