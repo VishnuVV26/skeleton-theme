@@ -8,6 +8,31 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+    "name": "t:general.branding",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "t:labels.logo"
+      },
+      {
+        "type": "range",
+        "id": "logo_width",
+        "min": 50,
+        "max": 300,
+        "step": 10,
+        "unit": "px",
+        "label": "t:labels.logo_width",
+        "default": 150
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "t:labels.favicon"
+      }
+    ]
+  },
+  {
     "name": "t:general.typography",
     "settings": [
       {
@@ -213,6 +238,10 @@
     "name": "t:general.colors",
     "settings": [
       {
+        "type": "header",
+        "content": "t:colors.general_header"
+      },
+      {
         "type": "color",
         "id": "background_color",
         "default": "#FFFFFF",
@@ -223,6 +252,134 @@
         "id": "foreground_color",
         "default": "#333333",
         "label": "t:labels.foreground"
+      },
+      {
+        "type": "color",
+        "id": "color_heading",
+        "default": "#111111",
+        "label": "t:labels.heading_color"
+      },
+      {
+        "type": "color",
+        "id": "color_success",
+        "default": "#008000",
+        "label": "t:labels.success"
+      },
+      {
+        "type": "color",
+        "id": "color_error",
+        "default": "#D32F2F",
+        "label": "t:labels.error"
+      },
+      {
+        "type": "header",
+        "content": "t:colors.header_header"
+      },
+      {
+        "type": "color",
+        "id": "color_header_bg",
+        "default": "#FFFFFF",
+        "label": "t:labels.background"
+      },
+      {
+        "type": "color",
+        "id": "color_header_text",
+        "default": "#333333",
+        "label": "t:labels.text"
+      },
+      {
+        "type": "header",
+        "content": "t:colors.footer_header"
+      },
+      {
+        "type": "color",
+        "id": "color_footer_bg",
+        "default": "#1A1A1A",
+        "label": "t:labels.background"
+      },
+      {
+        "type": "color",
+        "id": "color_footer_text",
+        "default": "#FFFFFF",
+        "label": "t:labels.text"
+      },
+      {
+        "type": "header",
+        "content": "t:colors.primary_button_header"
+      },
+      {
+        "type": "color",
+        "id": "color_btn_primary_bg",
+        "default": "#333333",
+        "label": "t:labels.background"
+      },
+      {
+        "type": "color",
+        "id": "color_btn_primary_text",
+        "default": "#FFFFFF",
+        "label": "t:labels.text"
+      },
+      {
+        "type": "header",
+        "content": "t:colors.secondary_button_header"
+      },
+      {
+        "type": "color",
+        "id": "color_btn_secondary_bg",
+        "default": "#FFFFFF",
+        "label": "t:labels.background"
+      },
+      {
+        "type": "color",
+        "id": "color_btn_secondary_text",
+        "default": "#333333",
+        "label": "t:labels.text"
+      },
+      {
+        "type": "header",
+        "content": "t:colors.product_header"
+      },
+      {
+        "type": "color",
+        "id": "color_star_rating",
+        "default": "#FFC107",
+        "label": "t:labels.star_rating"
+      },
+      {
+        "type": "color",
+        "id": "color_on_sale",
+        "default": "#E53935",
+        "label": "t:labels.on_sale_accent"
+      },
+      {
+        "type": "color",
+        "id": "color_sold_out",
+        "default": "#9E9E9E",
+        "label": "t:labels.sold_out_accent"
+      },
+      {
+        "type": "color",
+        "id": "color_custom_label",
+        "default": "#1565C0",
+        "label": "t:labels.custom_label"
+      },
+      {
+        "type": "color",
+        "id": "color_custom_label_2",
+        "default": "#7B1FA2",
+        "label": "t:labels.custom_label_2"
+      },
+      {
+        "type": "color",
+        "id": "color_in_stock",
+        "default": "#2E7D32",
+        "label": "t:labels.in_stock_accent"
+      },
+      {
+        "type": "color",
+        "id": "color_low_stock",
+        "default": "#F57F17",
+        "label": "t:labels.low_stock_accent"
       },
       {
         "type": "range",

@@ -1,3 +1,35 @@
 <script type="application/ld+json">
+{
 
+  "@context": "https://schema.org",
+
+  "@type": "Organization",
+
+  "name": {{ shop.name | json }},
+
+  "url": {{ shop.url | json }}
+
+  {%- if settings.logo -%}
+
+  ,"logo": {
+
+    "@type": "ImageObject",
+
+    "url": {{ settings.logo | image_url: width: 500 | prepend: 'https:' | json }}
+
+  }
+
+  {%- endif -%}
+
+  ,"contactPoint": {
+
+    "@type": "ContactPoint",
+
+    "contactType": "customer service",
+
+    "url": {{ shop.url | append: '/pages/contact' | json }}
+
+  }
+
+}
 </script>
