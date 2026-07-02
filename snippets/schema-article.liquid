@@ -1,53 +1,28 @@
 <script type="application/ld+json">
 {
-
-  "@context": "https://schema.org",
-
-  "@type": "Article",
-
-  "headline": {{ article.title | json }},
-
-  "url": {{ shop.url | append: article.url | json }},
-
-  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
-
-  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
-
-  "description": {{ article.excerpt_or_content | strip_html | truncatewords: 100 | json }},
-
-  "author": {
-
-    "@type": "Person",
-
-    "name": {{ article.author | json }}
-
-  },
-
-  "publisher": {
-
-    "@type": "Organization",
-
-    "name": {{ shop.name | json }}
-
-    {%- if settings.logo -%}
-
-    ,"logo": {
-
-      "@type": "ImageObject",
-
-      "url": {{ settings.logo | image_url: width: 200 | prepend: 'https:' | json }}
-
-    }
-
-    {%- endif -%}
-
-  }
-
-  {%- if article.image -%}
-
-  ,"image": {{ article.image | image_url: width: 800 | prepend: 'https:' | json }}
-
-  {%- endif -%}
-
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ article.title | json }},
+  "url": {{ shop.url | append: article.url | json }},
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "description": {{ article.excerpt_or_content | strip_html | truncatewords: 100 | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ shop.name | json }}
+    {%- if settings.logo -%}
+    ,"logo": {
+      "@type": "ImageObject",
+      "url": {{ settings.logo | image_url: width: 200 | prepend: 'https:' | json }}
+    }
+    {%- endif -%}
+  }
+  {%- if article.image -%}
+  ,"image": {{ article.image | image_url: width: 800 | prepend: 'https:' | json }}
+  {%- endif -%}
 }
 </script>
